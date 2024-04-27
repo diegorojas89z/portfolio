@@ -1,0 +1,1 @@
+Este será el repositorio donde subiré el proyecto de mi portfolio con Astro, siguiendo una guía de MiduDev
