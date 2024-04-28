@@ -45,6 +45,11 @@ const { description, title } = Astro.props;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+	color: white;
+  }
+
+  .menu-item {
+    @apply hover:scale-110 transition;
   }
 
   @media (prefers-reduced-motion: reduce) {

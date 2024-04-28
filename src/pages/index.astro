@@ -7,26 +7,28 @@ import MailIcon from "../components/icons/Mail.astro";
 import WorkIcon from "../components/icons/Work.astro";
 import DownloadIcon from "../components/icons/Download.astro";
 import SocialPill from "../components/SocialPill.astro";
+import AboutIcon from "../components/icons/About.astro"
 import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import CVdownload from "../assets/CVDiegoRojas.pdf";
 import ProyectIcon from "../components/icons/Proyect.astro";
 import Proyect from "../components/Proyect.astro";
+import AboutMe from "../components/AboutMe.astro";
 ---
 
 <Layout
-  title="Portfolio de Diego Rojas - Product Owner - Desarrollador y Programador Web"
+  title="Diego Rojas - Product Owner - Desarrollador y Programador Web"
   description="Product Owner. Desarrollador Full Stack. +9 Años de experiencia en coordinación de equipos de soporte técnico. De Buenos Aires, Argentina"
 >
   <main class="px-4">
-    <SectionContainer id="sobre-mi" class="py-44 pb-16">
+    <SectionContainer id="top" class="py-44 pb-16">
       <img
         class="rounded-full size-20 mb-4"
         src="https://avatars.githubusercontent.com/u/107219408"
         alt="Diego Rojas"
       />
       <h1
-        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+        class="text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
       >
         Hola, soy Diego Rojas <a
           href="https://www.linkedin.com/in/diegonoelrojasbranez/"
@@ -38,10 +40,10 @@ import Proyect from "../components/Proyect.astro";
       </h1>
       <h2 class="text-xl lg:text-2xltext-wrap max-2-[700px]">
         <span class="text-red-200/90">Product Owner. </span><span
-          class="text-white">Desarrollador Full Stack.</span
+          class="">Desarrollador Full Stack.</span
         >
-        <span class="text-white opacity-80"
-          >+9 Años de experiencia en coordinación de equipos de soporte técnico. Entusiasta de Scrum y en continuo aprendizaje</span
+        <span class="opacity-80"
+          >+9 Años de experiencia en coordinación de equipos de soporte técnico. Entusiasta de Scrum y en continuo aprendizaje.</span
         >
         <span class="text-blue-200/90">De Buenos Aires, Argentina</span>
       </h2>
@@ -68,7 +70,7 @@ import Proyect from "../components/Proyect.astro";
 
     <SectionContainer id="experiencia">
       <h2
-        class="text-white text-3xl font-semibold mb-6 mt-16 flex gap-x-2 items-center"
+        class=" text-3xl font-semibold mb-6 mt-16 flex gap-x-2 items-center"
       >
         <WorkIcon class="size-7" />
         Experiencia Laboral
@@ -78,12 +80,22 @@ import Proyect from "../components/Proyect.astro";
 
     <SectionContainer id="proyectos">
       <h2
-        class="text-white text-3xl font-semibold mb-6 flex gap-x-2 items-center"
+        class=" text-3xl font-semibold mb-6 flex gap-x-2 items-center"
       >
         <ProyectIcon class="size-8" />
         Proyectos
       </h2>
       <Proyect />
+    </SectionContainer>
+
+    <SectionContainer id="sobre-mi">
+      <h2
+        class=" text-3xl font-semibold mb-6 mt-16 flex gap-x-2 items-center"
+      >
+        <AboutIcon class="size-8" />
+        Sobre mí
+      </h2>
+      <AboutMe />
     </SectionContainer>
   </main>
 </Layout>
