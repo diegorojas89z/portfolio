@@ -6,7 +6,7 @@ import GithubIcon from "../components/icons/Github.astro";
 import MailIcon from "../components/icons/Mail.astro";
 import SocialPill from "../components/SocialPill.astro";
 import Experience from "../components/Experience.astro";
-import WorkIcon from "../components/icons/Work.astro"
+import WorkIcon from "../components/icons/Work.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 ---
 
@@ -14,9 +14,14 @@ import SectionContainer from "../components/SectionContainer.astro";
   title="Portfolio de Diego Rojas - Product Owner - Desarrollador y Programador Web"
   description="Product Owner. Desarrollador Full Stack. +9 Años de experiencia en coordinación de equipos de soporte técnico. De Buenos Aires, Argentina"
 >
-  <main>
+  <main class="px-4">
     <SectionContainer class="py-44 pb-16">
-      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+      <img
+        class="rounded-full size-16 mb-4"
+        src="https://avatars.githubusercontent.com/u/107219408"
+        alt="Diego Rojas"
+      />
+      <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
         Hola, soy Diego Rojas <a
           href="https://www.linkedin.com/in/diegonoelrojasbranez/"
           target="_blank"
@@ -25,7 +30,7 @@ import SectionContainer from "../components/SectionContainer.astro";
           ><Badge>Disponible para trabajar</Badge></a
         >
       </h1>
-      <h2 class="text-2xl text-wrap">
+      <h2 class="text-xl lg:text-2xltext-wrap max-2-[700px]">
         <span class="text-red-200/90">Product Owner. </span><span
           class="text-white">Desarrollador Full Stack.</span
         >
@@ -35,28 +40,34 @@ import SectionContainer from "../components/SectionContainer.astro";
         <span class="text-blue-200/90">De Buenos Aires, Argentina</span>
       </h2>
 
-      <nav class="flex gap-x-4 mt-8">
+      <nav class="flex gap-x-4 mt-8 flex-wrap">
         <SocialPill href="https://www.linkedin.com/in/diegonoelrojasbranez/">
-          <LinkedinIcon class="size-6" />
+          <LinkedinIcon class="size-4 md:size-6" />
           LinkedIn
         </SocialPill>
-		<SocialPill href="https://github.com/diegorojas89z">
-			<GithubIcon class="size-6" />
-			GitHub
-		  </SocialPill>
-		  <SocialPill href="mailto:rojasdiego.89@gmail.com">
-			<MailIcon class="size-6" />
-			Contactame
-		  </SocialPill>
+        <SocialPill href="https://github.com/diegorojas89z">
+          <GithubIcon class="size-4 md:size-6" />
+          GitHub
+        </SocialPill>
+        <SocialPill href="mailto:rojasdiego.89@gmail.com">
+          <MailIcon class="size-4 md:size-6" />
+          Contactame
+        </SocialPill>
+        <SocialPill href="mailto:rojasdiego.89@gmail.com">
+          <MailIcon class="size-4 md:size-6" />
+          Descargar CV
+        </SocialPill>
       </nav>
-	</SectionContainer>
+    </SectionContainer>
 
-	<SectionContainer id="experiencia">
-		<h2 class="text-white text-2xl font-semibold mb-6 flex gap-x-2 items-center">
-			<WorkIcon class="size-7" />
-			Experiencia Laboral
-		</h2>
-		<Experience />
-	</SectionContainer>
+    <SectionContainer id="experiencia">
+      <h2
+        class="text-white text-2xl font-semibold mb-6 flex gap-x-2 items-center"
+      >
+        <WorkIcon class="size-7" />
+        Experiencia Laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
   </main>
 </Layout>

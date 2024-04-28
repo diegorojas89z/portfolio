@@ -3,13 +3,19 @@ import ExperienceItem from "./ExperienceItem.astro"
 
 const EXPERIENCE = [
     {
-        date: 'Enero 2024 al presente',
+        date: 'Enero 2024 al presente – Incubadora Desafio Latam',
         title: 'Product Owner',
         description:
-            'Soy Product Owner de 2 células de trabajo con más de 10 desarrolladores en cada una, soy encargado de generar/priorizar el Product Backlog y transmitir las necesidades del Stakeholder hacía el equipo, brindo asistencia constante al equipo por medio de Discord. También, brindo asesoría técnica a la Incubadora de posibles nuevos proyectos.'
+            'Product Owner de 2 células de trabajo con más de 10 desarrolladores en cada una, soy encargado de generar/priorizar el Product Backlog y transmitir las necesidades del Stakeholder hacía el equipo, brindo asistencia constante al equipo por medio de Discord. También, brindo asesoría técnica a la Incubadora de posibles nuevos proyectos.'
     },
     {
-        date: 'Septiembre 2023 a Noviembre 2023',
+        date: 'Diciembre 2023 a Febrero 2024 – Incubadora Desafio Latam',
+        title: 'Desarrollador FrontEnd',
+        description:
+            'Proyecto: 3xI y Criteria, Desarrollo de un cuestionario para medir la polarización entre extremos opuestos utilizando tecnologías como: Jira, Scrum, JavaScript, React Js, Vite, Tailwind CSS, GitHub y siguiendo metodologías agiles.'
+    },
+    {
+        date: 'Septiembre 2023 a Noviembre 2023 – Incubadora Desafio Latam',
         title: 'Desarrollador Full Stack',
         description:
             'Proyecto: SurgenciaONG, Puesto: Desarrollador Backend. Siguiendo la metodología SCRUM se desarrolló un Blog con distintas funcionalidades utilizando tecnologías como: NodeJs, Express, Typescript, Docker, Postgres y librerías tales como Sequelize, Express-Validator, Swagger, Argon2 y JWT Luego también participé como desarrollador Frontend en el mismo proyecto utilizando tecnologías como: GitFlow · Jira · Vite · Scrum · Bootstrap · JavaScript · React Js, también realicé el Deploy de la Web en host: AWS LightSail, delegando los DNS de nic.cl e implementando el certificado SSL.'
@@ -17,7 +23,7 @@ const EXPERIENCE = [
 ]
 ---
 
-<ol class="relative border-s border-gray-200 dark:border-gray-700">
+<ol class="relative border-s border-gray-200 ml-3">
     {
         EXPERIENCE.map(experience => (
             <li class="mb-10 ms-4">
