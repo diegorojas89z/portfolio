@@ -1,21 +1,51 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 import Badge from "../components/Badge.astro";
+import LinkedinIcon from "../components/icons/Linkedin.astro";
+import GithubIcon from "../components/icons/Github.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import SocialPill from "../components/SocialPill.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout
+  title="Portfolio de Diego Rojas - Product Owner - Desarrollador y Programador Web"
+  description="Product Owner. Desarrollador Full Stack. +9 Años de experiencia en coordinación de equipos de soporte técnico. De Buenos Aires, Argentina"
+>
   <main>
     <section class="w-full lg:w-[740px] mx-auto py-44">
       <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
-        Hola, soy Diego Rojas <a href="https://www.linkedin.com/in/diegonoelrojasbranez/" target="_blank" rel="noopener" class="flex justify-center items-center"><Badge>Disponible para trabajar</Badge></a>
+        Hola, soy Diego Rojas <a
+          href="https://www.linkedin.com/in/diegonoelrojasbranez/"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+          ><Badge>Disponible para trabajar</Badge></a
+        >
       </h1>
-      <h2 class="text-white text-xl opacity-80">
-        Product Owner. Desarrollador Full Stack. Coordinador de técnicos. De
-        Buenos Aires, Argentina
+      <h2 class="text-2xl text-wrap">
+        <span class="text-red-200/90">Product Owner. </span><span
+          class="text-white">Desarrollador Full Stack.</span
+        >
+        <span class="text-white opacity-80"
+          >+9 Años de experiencia en coordinación de equipos de soporte técnico.</span
+        >
+        <span class="text-blue-200/90">De Buenos Aires, Argentina</span>
       </h2>
 
-      <ul></ul>
+      <nav class="flex gap-x-4 mt-8">
+        <SocialPill href="https://www.linkedin.com/in/diegonoelrojasbranez/">
+          <LinkedinIcon class="w-6 h-6" />
+          LinkedIn
+        </SocialPill>
+		<SocialPill href="https://github.com/diegorojas89z">
+			<GithubIcon class="w-6 h-6" />
+			GitHub
+		  </SocialPill>
+		  <SocialPill href="https://github.com/diegorojas89z">
+			<MailIcon class="w-6 h-6" />
+			rojasdiego.89@gmail.com
+		  </SocialPill>
+      </nav>
     </section>
   </main>
 </Layout>
