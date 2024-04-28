@@ -1,0 +1,74 @@
+---
+import ReactIcon from "./icons/React.astro";
+import BootstrapIcon from "./icons/Bootstrap.astro";
+import CSSIcon from "./icons/CSS.astro";
+import JSIcon from "./icons/Javascript.astro";
+import HTMLIcon from "./icons/HTML.astro";
+
+const TAGS = {
+  REACT: {
+    name: "React",
+    class: "bg-black text-white",
+    icon: ReactIcon,
+  },
+  BOOTSTRAP: {
+    name: "Bootstrap",
+    class: "bg-black text-white",
+    icon: BootstrapIcon,
+  },
+  HTML: {
+    name: "HTML",
+    class: "bg-black text-white",
+    icon: HTMLIcon,
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-black text-white",
+    icon: CSSIcon,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-black text-white",
+    icon: JSIcon,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "Surgencia ONG",
+    description:
+      "Desarrollo de Blog para Surgencia ONG con React y Bootstrap. Con una función para reportar conflictos ambientales directamente desde un Mapa de Google. Optimazada para SEO",
+    link: "https://surgenciaong.cl/",
+    github: "https://github.com/dlab-team/c12-frontend",
+    image: "/surgenciaimg.webp",
+    tags: [TAGS.REACT, TAGS.BOOTSTRAP, TAGS.CSS, TAGS.HTML, TAGS.JAVASCRIPT],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ title, description, tags, image }) => (
+    <>
+      <article class="text-white">
+        <h3 class="text-blue-200 text-2xl font-semiboldmb-2 mb-2">{title}</h3>
+        <p class="text-lg text-pretty" />
+        {description}
+      </article>
+      <ul class="text-white flex gap-x-2 flew-row mt-2 mb-2">
+        {tags.map((tag) => (
+          <li>
+            <span class={`flex gap-x-2 bg-gray-600/10 rounded-full text-xs ${tag.class} py-1 px-2 hover:scale-110 hover:bg-gray-900 transition`}>
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img
+        class="rounded-xl shadow-2xl shadow-white/10"
+        src={image}
+        alt={`Captura de pantalla del proyecto ${title}`}
+      />
+    </>
+  ))
+}
