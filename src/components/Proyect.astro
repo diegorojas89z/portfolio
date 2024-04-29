@@ -4,6 +4,14 @@ import BootstrapIcon from "./icons/Bootstrap.astro";
 import CSSIcon from "./icons/CSS.astro";
 import JSIcon from "./icons/Javascript.astro";
 import HTMLIcon from "./icons/HTML.astro";
+import LinkButton from "./LinkButton.astro";
+import Github from "./icons/Github.astro";
+import URLicon from "./icons/URL.astro";
+import ExpressIcon from "./icons/Express.astro";
+import NodeIcon from "./icons/Node.astro";
+import PostgreIcon from "./icons/Postgre.astro";
+import TypescriptIcon from "./icons/Typescript.astro";
+import TailwindIcon from "./icons/Tailwind.astro";
 
 const TAGS = {
   REACT: {
@@ -31,6 +39,31 @@ const TAGS = {
     class: "bg-black ",
     icon: JSIcon,
   },
+  EXPRESS: {
+    name: "Express.js",
+    class: "bg-black text-white",
+    icon: ExpressIcon,
+  },
+  NODE: {
+    name: "Node.js",
+    class: "bg-black ",
+    icon: NodeIcon,
+  },
+  POSTGRE: {
+    name: "PostgreSQL",
+    class: "bg-black ",
+    icon: PostgreIcon,
+  },
+  TAILWIND: {
+    name: "Tailwind",
+    class: "bg-black ",
+    icon: TailwindIcon,
+  },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-black ",
+    icon: TypescriptIcon,
+  },
 };
 
 const PROJECTS = [
@@ -39,18 +72,39 @@ const PROJECTS = [
     description:
       "Desarrollo de Blog para Surgencia ONG con React y Bootstrap. Con una función para reportar conflictos ambientales directamente desde Google Maps. Optimazada para SEO",
     link: "https://surgenciaong.cl/",
-    github: "https://github.com/dlab-team/c12-frontend",
+    repofront: "https://github.com/dlab-team/c12-frontend",
+    repoback: "https://github.com/dlab-team/c12-backend",
     image: "/surgenciaimg.webp",
-    tags: [TAGS.REACT, TAGS.BOOTSTRAP, TAGS.CSS, TAGS.HTML, TAGS.JAVASCRIPT],
+    tags: [TAGS.REACT, TAGS.BOOTSTRAP, TAGS.TYPESCRIPT, TAGS.POSTGRE, TAGS.NODE, TAGS.EXPRESS],
+  },
+  {
+    title: "3xI + Criteria",
+    description:
+      "Desarrollo de cuestionario para medir las polarizaciones entre los distintos opuestos de la población de Chile",
+    link: "https://laboratoriocivico.vercel.app/",
+    repofront: "https://github.com/dlab-team/c14-frontend",
+    repoback: "https://github.com/dlab-team/c14-backend",
+    image: "/3ximg.webp",
+    tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.CSS, TAGS.HTML, TAGS.JAVASCRIPT],
+  },
+  {
+    title: "VisorPyme",
+    description:
+      "Desarrollo de un blog y un diagnostico que ayuda a medir el conocimiento sobre distintos pilares de emprendedores, pymes y empresas",
+    link: "https://c15-frontend.vercel.app/",
+    repofront: "https://github.com/dlab-team/c15-frontend",
+    repoback: "https://github.com/dlab-team/c15-backend",
+    image: "/visorpymeimg.webp",
+    tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.CSS, TAGS.HTML, TAGS.JAVASCRIPT],
   },
 ];
 ---
 
 {
-  PROJECTS.map(({ title, description, tags, image }) => (
+  PROJECTS.map(({ title, description, tags, image, link, repofront, repoback}) => (
     <>
       <article class="">
-        <h3 class="text-blue-200 text-2xl font-semiboldmb-2 mb-2">{title}</h3>
+        <h3 class="text-blue-200 text-2xl font-semiboldmb-2 mb-2 mt-5">{title}</h3>
         <p class="text-lg text-pretty" />
         {description}
       </article>
@@ -65,10 +119,25 @@ const PROJECTS = [
         ))}
       </ul>
       <img
+        loading="lazy"
         class="rounded-xl shadow-2xl shadow-white/10"
         src={image}
         alt={`Captura de pantalla del proyecto ${title}`}
       />
-    </>
+      <footer class="flex gap-x-4 mt-3">
+        <LinkButton href={repofront}>
+          <Github class="size-4 "/>
+          Repo FrontEnd
+        </LinkButton>
+        <LinkButton href={repoback}>
+          <Github class="size-4"/>
+          Repo BackEnd
+        </LinkButton>
+        <LinkButton href={link}>
+          <URLicon class="size-4"/>
+          Ir al sitio web
+        </LinkButton>
+      </footer>
+    </KL>
   ))
 }

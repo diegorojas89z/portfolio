@@ -7,7 +7,7 @@ import MailIcon from "../components/icons/Mail.astro";
 import WorkIcon from "../components/icons/Work.astro";
 import DownloadIcon from "../components/icons/Download.astro";
 import SocialPill from "../components/SocialPill.astro";
-import AboutIcon from "../components/icons/About.astro"
+import AboutIcon from "../components/icons/About.astro";
 import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import CVdownload from "../assets/CVDiegoRojas.pdf";
@@ -34,16 +34,17 @@ import AboutMe from "../components/AboutMe.astro";
           href="https://www.linkedin.com/in/diegonoelrojasbranez/"
           target="_blank"
           rel="noopener"
-          class="flex justify-center items-center"
+          class="flex justify-center items-center hover:scale-105 transition"
           ><Badge>Disponible para trabajar</Badge></a
         >
       </h1>
       <h2 class="text-xl lg:text-2xltext-wrap max-2-[700px]">
-        <span class="text-red-200/90">Product Owner. </span><span
-          class="">Desarrollador Full Stack.</span
+        <span class="text-red-200/90">Product Owner. </span><span class=""
+          >Desarrollador Full Stack.</span
         >
         <span class="opacity-80"
-          >+9 Años de experiencia en coordinación de equipos de soporte técnico. Entusiasta de Scrum y en continuo aprendizaje.</span
+          >+9 Años de experiencia en coordinación de equipos de soporte técnico.
+          Entusiasta de Scrum y en continuo aprendizaje.</span
         >
         <span class="text-blue-200/90">De Buenos Aires, Argentina</span>
       </h2>
@@ -69,9 +70,7 @@ import AboutMe from "../components/AboutMe.astro";
     </SectionContainer>
 
     <SectionContainer id="experiencia">
-      <h2
-        class=" text-3xl font-semibold mb-6 mt-16 flex gap-x-2 items-center"
-      >
+      <h2 class="text-3xl font-semibold mb-6 mt-12 pt-12 flex gap-x-2 items-center">
         <WorkIcon class="size-7" />
         Experiencia Laboral
       </h2>
@@ -79,9 +78,7 @@ import AboutMe from "../components/AboutMe.astro";
     </SectionContainer>
 
     <SectionContainer id="proyectos">
-      <h2
-        class=" text-3xl font-semibold mb-6 flex gap-x-2 items-center"
-      >
+      <h2 class="text-3xl font-semibold mb-6 pt-12 flex gap-x-2 items-center">
         <ProyectIcon class="size-8" />
         Proyectos
       </h2>
@@ -89,9 +86,7 @@ import AboutMe from "../components/AboutMe.astro";
     </SectionContainer>
 
     <SectionContainer id="sobre-mi">
-      <h2
-        class=" text-3xl font-semibold mb-6 mt-16 flex gap-x-2 items-center"
-      >
+      <h2 class="text-3xl font-semibold mb-6 mt-16 flex gap-x-2 items-center">
         <AboutIcon class="size-8" />
         Sobre mí
       </h2>
