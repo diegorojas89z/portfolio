@@ -108,10 +108,10 @@ const PROJECTS = [
         <p class="text-lg text-pretty" />
         {description}
       </article>
-      <ul class=" flex gap-x-2 flew-row mt-2 mb-2">
+      <ul class=" flex gap-x-2 flew-row mt-2 mb-2 flex-wrap">
         {tags.map((tag) => (
           <li>
-            <span class={`flex gap-x-2 bg-gray-600/10 rounded-full text-xs ${tag.class} py-1 px-2 hover:scale-110 hover:bg-gray-900 transition flex-wrap`}>
+            <span class={`flex gap-x-2 bg-gray-600/10 rounded-full text-xs ${tag.class} py-1 px-2 hover:scale-110 hover:bg-gray-900 transition m-1`}>
               <tag.icon class="size-4" />
               {tag.name}
             </span>
